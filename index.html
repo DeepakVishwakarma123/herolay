@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio layout</title>
+  <!-- external css -->
+  <link rel="stylesheet" href="style.css">
+  <!-- jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+</head>
+
+<body bgcolor="black">
+  <!-- main container -->
+  <div class="bg-black grid md:grid-cols-2 gap-4 w-full h-screen p-3">
+    <!-- all intro section -->
+   <div class="flex flex-col gap-8" id="textBox">
+      <!-- boxes -->
+      <div>
+        <p class="text-6xl text-red-800 font-semibold font-serif hidden" id="name">Deepak</p>
+        <p class="text-6xl text-white font-medium font-serif hidden" id="lastname">Vishwakarma</p>
+      </div>
+      <div>
+        <p class="text-6xl font-semibold opacity-45 text-red-700 font-serif">I'm a</p>
+        <!-- typing element -->
+        <p class="text-white font-semibold font-serif text-3xl" id="typeData"></p>
+      </div>
+      <!-- button box -->
+      <div>
+      <button class="bg-red-700 p-1 rounded-md">
+        <a href="github.com" class="text-white font-serif font-semibold flex justify-center items-center gap-3">
+          <img src="https://cdn-icons-png.flaticon.com/128/3291/3291695.png" width="20px">
+          <p>Github</p>
+        </a>
+      </button>
+      </div>
+      <!-- vertical animation main box -->
+      <div class="grid grid-cols-3 gap-2">
+        <div class="">
+          <marquee direction="down">
+            <div class="flex flex-col gap-5">
+              <div class="border border-red-700 p-3 flex justify-center items-center">
+                <p class="text-white font-semibold text-xl">Django</p>
+              </div>
+              <div class="border border-red-700 p-3 flex justify-center items-center">
+                <p class="text-white font-semibold text-xl">Laravel</p>
+              </div>
+              <div class="border border-red-700 p-3 flex justify-center items-center">
+                <p class="text-white font-semibold text-xl">Ruby</p>
+              </div>
+            </div>
+          </marquee>
+        </div>
+        <div class="">
+          <marquee direction="up">
+            <div class="flex flex-col gap-5">
+              <div class="border border-red-700 p-3 flex justify-center items-center">
+                <p class="text-white font-semibold text-xl">Mongodb</p>
+              </div>
+              <div class="border border-red-700 p-3 flex justify-center items-center">
+                <p class="text-white font-semibold text-xl">Reactjs</p>
+              </div>
+              <div class="border border-red-700 p-3 flex justify-center items-center">
+                <p class="text-white font-semibold text-xl">Nodejs</p>
+              </div>
+            </div>
+          </marquee>
+        </div>
+        <div class="">
+          <marquee direction="down">
+            <div class="flex flex-col gap-5">
+              <div class="border border-red-700 p-3 flex justify-center items-center">
+                <p class="text-white font-semibold text-xl">Aws</p>
+              </div>
+              <div class="border border-red-700 p-3 flex justify-center items-center">
+                <p class="text-white font-semibold text-xl">Tailwind</p>
+              </div>
+              <div class="border border-red-700 p-3 flex justify-center items-center">
+                <p class="text-white font-semibold text-xl">Flutter</p>
+              </div>
+            </div>
+          </marquee>
+        </div>
+      </div>
+      <!-- vertical animation main box ends here! -->
+    </div>
+    <!-- intro section ends here! -->
+
+    <!-- images container -->
+    <div id="imageBox" class="hidden">
+      <img src="samurai-katana-warrior-immortal-sun-silhouette-black-4082x8556-7471 (1).png" class="">
+    </div>
+  </div>
+  <!-- main container ends here! -->
+  <script>
+    // typed.js options
+    let options = {
+      strings: ["Developer", "Engineer", "Youtuber", "Blogger", "TechLover"],
+      typeSpeed: 200,
+      backSpeed: 100,
+      backDelay: 10,
+      startDelay: 5,
+      showCursor: false,
+      fadeOut: true,
+      loop: true
+    }
+    //new typed instance
+    let typedData = new Typed("#typeData", options)
+    //jquery effect
+    $(document).ready(
+      $("#name").fadeIn(1000),
+      $("#lastname").fadeIn(2500),
+      $("#imageBox").fadeIn(4000)
+    )
+  </script>
+</body>
+</html>
